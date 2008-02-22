@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=wc3270
-AppVerName=wc3270 3.3.7p2
+AppVerName=wc3270 3.3.7p3
 AppPublisher=Paul Mattes
 AppPublisherURL=http://x3270.bgp.nu
 AppSupportURL=http://x3270.bgp.nu

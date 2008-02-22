@@ -834,11 +834,11 @@ possibly waiting for a response.
 ')dnl
 XX_PP
 XX_TS(2,center; lw(3i) lw(3i).)
-ifelse(XX_PRODUCT,x3270,,XX_PRODUCT,c3270,,XX_PRODUCT,s3270,,XX_PRODUCT,wc3270,,`XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,All)`'XX_VOID())	XX_TD(return entire screen contents in XX_SM(ASCII)))
-XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,FromCursor)`'XX_LPAREN`'XX_INT()XX_FI(length)`'XX_RPAREN`')	XX_TD(return screen contents at cursor in XX_SM(ASCII)))
-XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,Line)`'XX_LPAREN`'XX_INT()XX_FI(row)`'XX_COMMA`'XX_INT()XX_FI(col)`'XX_COMMA`'XX_INT()XX_FI(length)`'XX_RPAREN)	XX_TD(return screen contents in XX_SM(ASCII)))
-XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,Block)`'XX_LPAREN`'XX_INT()XX_FI(row)`'XX_COMMA`'XX_INT()XX_FI(col)`'XX_COMMA`'XX_INT()XX_FI(rows)`'XX_COMMA`'XX_INT()XX_FI(cols)`'XX_RPAREN`')	XX_TD(return screen region in XX_SM(ASCII)))
-XX_TR(XX_TDH(XX_CCHAR()XX_INT()`AsciiField'XX_VOID())	XX_TD(return current field in XX_SM(ASCII)))
+ifelse(XX_PRODUCT,x3270,,XX_PRODUCT,c3270,,XX_PRODUCT,s3270,,XX_PRODUCT,wc3270,,`XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,All)`'XX_VOID())	XX_TD(return entire screen contents as text))
+XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,FromCursor)`'XX_LPAREN`'XX_INT()XX_FI(length)`'XX_RPAREN`')	XX_TD(return screen contents at cursor as text))
+XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,Line)`'XX_LPAREN`'XX_INT()XX_FI(row)`'XX_COMMA`'XX_INT()XX_FI(col)`'XX_COMMA`'XX_INT()XX_FI(length)`'XX_RPAREN)	XX_TD(return screen contents as text))
+XX_TR(XX_TDH(XX_CCHAR()XX_LS()`Ascii'ifelse(XX_PRODUCT,lib3270,Block)`'XX_LPAREN`'XX_INT()XX_FI(row)`'XX_COMMA`'XX_INT()XX_FI(col)`'XX_COMMA`'XX_INT()XX_FI(rows)`'XX_COMMA`'XX_INT()XX_FI(cols)`'XX_RPAREN`')	XX_TD(return screen region as text))
+XX_TR(XX_TDH(XX_CCHAR()XX_INT()`AsciiField'XX_VOID())	XX_TD(return current field as text))
 ')dnl
 XX_TR(XX_TDH(XX_INT()XX_LS()XX_BLOCK()`Attn'XX_VOID())	XX_TD(attention key))
 ifelse(XX_PRODUCT,x3270,`XX_TR(XX_TDH(AltCursor)	XX_TD(switch between block and underscore cursor))
@@ -886,7 +886,7 @@ XX_TR(XX_TDH(XX_INT()XX_LS()`Home'XX_VOID())	XX_TD(move cursor to first input fi
 XX_TR(XX_TDH(XX_INT()XX_LS()`Insert'XX_VOID())	XX_TD(set insert mode))
 XX_TR(XX_TDH(XX_INT()XX_LS()XX_BLOCK()`Interrupt'XX_VOID())	XX_TD(send XX_SM(TELNET IP) to host))
 XX_TR(XX_TDH(XX_INT()XX_LA()Key`'XX_LPAREN`'XX_CCHAR()XX_FI(keysym)`'XX_RPAREN)	XX_TD(insert key XX_FI(keysym)))
-ifelse(XX_PRODUCT,lib3270,,`XX_TR(XX_TDH(Key`'XX_LPAREN`'0x`'XX_FI(xx)`'XX_RPAREN)	XX_TD(insert key with XX_SM(ASCII) code XX_FI(xx)))
+ifelse(XX_PRODUCT,lib3270,,`XX_TR(XX_TDH(Key`'XX_LPAREN`'0x`'XX_FI(xx)`'XX_RPAREN)	XX_TD(insert key with character code XX_FI(xx)))
 ')dnl
 ifelse(XX_PRODUCT,x3270,`XX_TR(XX_TDH(Keymap(XX_FI(keymap)))	XX_TD(toggle alternate XX_FI(keymap) (or remove with XX_FB(None))))
 XX_TR(XX_TDH(KybdSelect(XX_FI(direction)[,XX_FI(atom)...]))	XX_TD(Extend selection by one row or column))
@@ -919,7 +919,7 @@ XX_TR(XX_TDH(XX_INT()XX_LS()`Redraw'XX_VOID())	XX_TD(redraw window))
 XX_TR(XX_TDH(XX_INT()XX_LS()`Reset'XX_VOID())	XX_TD(reset locked keyboard))
 XX_TR(XX_TDH(XX_INT()XX_LS()`Right'XX_VOID())	XX_TD(move cursor right))
 XX_TR(XX_TDH(XX_INT()XX_LS()`Right2'XX_VOID())	XX_TD(move cursor right 2 positions))
-ifelse(XX_PRODUCT,x3270,,XX_PRODUCT,s3270,,XX_PRODUCT,c3270,,XX_PRODUCT,wc3270,,`XX_TR(XX_TDH(XX_INT()XX_LS()ReadBuffer`'XX_SPACE`'Ascii`'XX_VOID())	XX_TD(dump screen buffer in ASCII))
+ifelse(XX_PRODUCT,x3270,,XX_PRODUCT,s3270,,XX_PRODUCT,c3270,,XX_PRODUCT,wc3270,,`XX_TR(XX_TDH(XX_INT()XX_LS()ReadBuffer`'XX_SPACE`'Ascii`'XX_VOID())	XX_TD(dump screen buffer as text))
 XX_TR(XX_TDH(XX_INT()XX_LS()ReadBuffer`'XX_SPACE`'Ebcdic`'XX_VOID())	XX_TD(dump screen buffer in EBCDIC))
 ')dnl
 ifelse(XX_PRODUCT,x3270,,XX_PRODUCT,s3270,,XX_PRODUCT,c3270,,`XX_TR(XX_TDH(XX_INT()XX_LS()`Rows'XX_VOID())	XX_TD(report screen size))

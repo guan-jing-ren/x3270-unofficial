@@ -1,5 +1,15 @@
 <h1>Changes in x3270, c3270, wc3270, s3270, tcl3270, pr3287 and wpr3287 3.3</h1>
 3.3 is the current development line for the x3270 suite.
+<h2>Changes in x3270 3.3.7p3, 22. February 2008</h2>
+<ul>
+  <li>Bug Fixes:
+    <ul>
+      <li>Fixed an issue with Idle commands, which would cause <b>x3270</b>
+       to exit with a <i>Not Found</i> error as soon as the idle command
+       fired.</li>
+    </ul>
+  </li>
+</ul>
 <h2>Changes in x3270 3.3.7, 25. December 2007</h2>
 <ul>
   <li>Bug Fixes:
@@ -75,6 +85,18 @@ c3270.cursesColorForProtected
 c3270.cursesColorForProtectedIntensified
        </pre>
        The value for each of these is a curses color number (0 through 7).</li>
+    </ul>
+  </li>
+</ul>
+<h2>Changes in wc3270 3.3.7p3, 22. February 2008</h2>
+<ul>
+  <li>Bug Fixes:
+    <ul>
+     <li>Changed the New Session Wizard to create the Application Data
+      directory, so <b>wc3270</b> can be run by any user, not just the one
+      that installed it.</li>
+     <li>Changed the default window title from the pathname of the session
+      to just the session name.</li>
     </ul>
   </li>
 </ul>
@@ -163,12 +185,24 @@ wc3270.hostColorForProtectedIntensified
     </ul>
   </li>
 </ul>
+<h2>Changes in tcl3270 3.3.7p3, 22. Febuary 2008</h2>
+<ul>
+  <li>Bug Fixes:
+    <ul>
+      <li>Fixed a problem with non-ASCII characters returned by the <b>Ascii</b>
+       command.</li>
+      <li>Fixed a problem with the <b>Connect</b> command, which resulted in
+       subsequent actions not blocking properly.</li>
+    </ul>
+  </li>
+</ul>
 <h2>Changes in tcl3270 3.3.7, 25. December 2007</h2>
 <ul>
-  <li>Bug Fixes:</li>
+  <li>Bug Fixes:
     <ul>
       <li>(none)</li>
     </ul>
+  </li>
   <li>New Features:
     <ul>
       <li>Added UTF-8 support.  If the current locale specifies UTF-8 encoding,
