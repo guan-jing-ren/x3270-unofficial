@@ -33,7 +33,7 @@ Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\w3n46.dll"; DestDi
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\wc3270wiz.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wpr3287\wpr3287.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\catf.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\mkshort.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\mkshort.exe"; DestDir: "{app}"; Flags: ignoreversion deleteafterinstall
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\html\Bugs.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\html\Build.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.7-branch\wc3270\html\FAQ.html"; DestDir: "{app}\html"; Flags: ignoreversion
