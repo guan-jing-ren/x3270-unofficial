@@ -3,12 +3,12 @@
 
 [Setup]
 AppName=wc3270
-AppVerName=wc3270 3.3.7p3
+AppVerName=wc3270 3.3.7p4
 AppPublisher=Paul Mattes
 AppPublisherURL=http://x3270.bgp.nu
 AppSupportURL=http://x3270.bgp.nu
 AppUpdatesURL=http://x3270.bgp.nu
-AppCopyright=Copyright (C) 1989-2007 by Paul Mattes, GTRC and others
+AppCopyright=Copyright (C) 1989-2008 by Paul Mattes, GTRC and others
 WizardSmallImageFile=x3270-icon2.bmp
 DefaultDirName={pf}\wc3270
 DisableDirPage=no
