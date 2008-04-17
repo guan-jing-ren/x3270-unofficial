@@ -1039,6 +1039,7 @@ XX_FB(XX_PRODUCT) will wait for the host to unlock the keyboard before further
 processing the string.)
 XX_TS(2,l l.)
 XX_TR(XX_TD(XX_BS()b)	XX_TD(Left))
+XX_TR(XX_TD(XX_BS()`e'XX_FI(xx))	XX_TD(EBCDIC character in hex))
 XX_TR(XX_TD(XX_BS()f)	XX_TD(Clear*))
 XX_TR(XX_TD(XX_BS()n)	XX_TD(Enter*))
 XX_TR(XX_TD(XX_BS()`pa'XX_FI(n))	XX_TD(PA(XX_FI(n))*))
@@ -1046,6 +1047,7 @@ XX_TR(XX_TD(XX_BS()`pf'XX_FI(nn))	XX_TD(PF(XX_FI(nn))*))
 XX_TR(XX_TD(XX_BS()r)	XX_TD(Newline))
 XX_TR(XX_TD(XX_BS()t)	XX_TD(Tab))
 XX_TR(XX_TD(XX_BS()T)	XX_TD(BackTab))
+XX_TR(XX_TD(XX_BS()`x'XX_FI(xx))	XX_TD(ASCII character in hex))
 XX_TE()
 ifelse(XX_PRODUCT,s3270,,XX_PRODUCT,tcl3270,,XX_PRODUCT,lib3270,,XX_PRODUCT,wc3270,
 `XX_IP
