@@ -4,8 +4,10 @@
 <ul>
   <li>Bug Fixes:
     <ul>
-      <li>Corrected input of 8-bit characters when <b>x3270</b> is run in
-       UTF-8 locales.</li>
+      <li>Corrected input of 8-bit characters when <b>x3270</b> is run in a
+       UTF-8 locale.</li>
+      <li>Corrected a bug which sometimes left the local file open after a
+       failed file transfer.</li>
     </ul>
   </li>
   <li>New Features:
@@ -61,6 +63,12 @@
     <ul>
       <li>Added <b>\e<i>XX</i></b> support to the <b>String()</b> action,
        which allows an EBCDIC code to be entered.</li>
+    </ul>
+  </li>
+  <li>Bug Fixes:
+    <ul>
+      <li>Corrected a bug which sometimes left the local file open after a
+       failed file transfer.</li>
     </ul>
   </li>
 </ul>
@@ -135,6 +143,8 @@ c3270.cursesColorForProtectedIntensified
     <ul>
       <li>Fixed a problem with transferring binary files, where <b>0x0d</b>
        characters might be acidentally added to or removed from the data.</li>
+      <li>Corrected a bug which sometimes left the local file open after a
+       failed file transfer.</li>
     </ul>
   </li>
 </ul>
@@ -233,6 +243,12 @@ wc3270.hostColorForProtectedIntensified
        which allows an EBCDIC code to be entered.</li>
     </ul>
   </li>
+  <li>Bug Fixes:
+    <ul>
+      <li>Corrected a bug which sometimes left the local file open after a
+       failed file transfer.</li>
+    </ul>
+  </li>
 </ul>
 <h2>Changes in s3270 3.3.7, 25. December 2007</h2>
 <ul>
@@ -262,6 +278,12 @@ wc3270.hostColorForProtectedIntensified
     <ul>
       <li>Added <b>\e<i>XX</i></b> support to the <b>String()</b> action,
        which allows an EBCDIC code to be entered.</li>
+    </ul>
+  </li>
+  <li>Bug Fixes:
+    <ul>
+      <li>Corrected a bug which sometimes left the local file open after a
+       failed file transfer.</li>
     </ul>
   </li>
 </ul>
