@@ -3977,6 +3977,22 @@ Default_action(Widget w unused, XEvent *event, String *params, Cardinal *num_par
 			return;
 #endif /*]*/
 		ll = XLookupString(kevent, buf, 32, &ks, (XComposeStatus *) 0);
+		if (ll > 1) {
+			char tmp[33];
+
+			/*
+			 * Translate from (local) UTF-8 to the implied
+			 * 8-bit character set.
+			 */
+			strncpy(tmp, buf, ll);
+			tmp[ll] = '\0';
+			buf[0] = utf8_lookup(tmp, NULL, NULL);
+			if (buf[0]) {
+				key_ACharacter((unsigned char) buf[0], KT_STD,
+				    IA_DEFAULT, NULL);
+				return;
+			}
+		}
 		if (ll == 1) {
 			/* Add Meta; XLookupString won't. */
 			if (event_is_meta(kevent->state))
