@@ -1137,6 +1137,12 @@ ft_start(void)
 	flen = kybd_prime();
 	if (!flen || flen < strlen(cmd) - 1) {
 		XtFree(cmd);
+		if (ft_local_file != NULL) {
+		    	fclose(ft_local_file);
+			ft_local_file = NULL;
+			if (receive_flag && !append_flag)
+			    unlink(ft_local_filename);
+		}
 		popup_an_error(get_message("ftUnable"));
 		allow_overwrite = False;
 		return 0;
@@ -1896,6 +1902,12 @@ Transfer_action(Widget w unused, XEvent *event, String *params,
 	flen = kybd_prime();
 	if (!flen || flen < strlen(cmd) - 1) {
 		Free(cmd);
+		if (ft_local_file != NULL) {
+		    	fclose(ft_local_file);
+			ft_local_file = NULL;
+			if (receive_flag && !append_flag)
+			    unlink(ft_local_filename);
+		}
 		popup_an_error(get_message("ftUnable"));
 		return;
 	}
