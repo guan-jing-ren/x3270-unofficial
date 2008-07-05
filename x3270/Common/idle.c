@@ -19,7 +19,7 @@
 
 #include "globals.h"
 
-#if defined(X3270_SCRIPT) /*[*/
+#if defined(X3270_DISPLAY) || defined(C3270) /*[*/
 
 #if defined(X3270_DISPLAY) /*[*/
 #include <X11/StringDefs.h>
@@ -144,7 +144,14 @@ idle_init(void)
 		idle_enabled = True;
 
 	/* Seed the random number generator (we seem to be the only user). */
+#if defined(_WIN32) /*[*/
+	srand(time(NULL));
+#else /*][*/
 	srandom(time(NULL));
+#endif /*]*/
+
+	printf("idle_init: user_enabled %d, enabled %d, idle_ms %ld idle_randomize %d\n",
+		idle_user_enabled, idle_enabled, idle_ms, idle_randomize);
 }
 
 /*
@@ -246,7 +253,11 @@ reset_idle_timer(void)
 		idle_ms_now = idle_ms;
 		if (idle_randomize) {
 			idle_ms_now = idle_ms;
+#if defined(_WIN32) /*[*/
+			idle_ms_now -= rand() % (idle_ms / 10L);
+#else /*][*/
 			idle_ms_now -= random() % (idle_ms / 10L);
+#endif /*]*/
 		}
 #if defined(DEBUG_IDLE_TIMEOUT) /*[*/
 		trace_event("Setting idle timeout to %lu\n", idle_ms_now);
