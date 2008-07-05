@@ -1,6 +1,12 @@
 <h1>Known Bugs in x3270, c3270, wc3270, s3270, tcl3270, pr3287 and wpr3287 3.3.7</h1>
 <h2>Bugs Fixed in the Current Patch Release</h2>
 <ul>
+  <li>[x3270 3.3.7p7] Input of 8-bit characters (e.g., accented characters)
+   does not work in <b>x3270</b> in UTF-8 locales.
+   (See <a href="http://bugs.gentoo.org/show_bug.cgi?id=227997"></li>
+   Gentoo bug 227997</a>.)</li>
+  <li>[wc3270 3.3.7p7] Binary file transfer on Windows can result in corrupted
+   files, with hex <b>0x0d</b> characters inserted or deleted.</li>
   <li>[wc3270 3.3.7p2] <b>wc3270</b> could not start <b>wpr3287</b>.</li>
   <li>[c3270 3.3.7p1] <b>c3270</b>'s <i>configure</i> script would not detect
   missing ncurses header files, and <b>c3270</b> would not build if ncursesw
@@ -8,17 +14,6 @@
 </ul>
 <h2>Outstanding Bugs</h2>
 <ul>
- <li>Input of 8-bit characters (e.g., accented characters) does not work
- in <b>x3270</b> in UTF-8 locales.
-  (See <a href="http://bugs.gentoo.org/show_bug.cgi?id=227997">
-  Gentoo bug 227997</a>.)</li>
-  <p>
- A workaround is to change the locale for
-  the <b>x3270</b> to non-UTF-8, e.g., change LANG and LC_ALL from
-  <b>de_DE.UTF-8</b> to <b>de_DE.ISO8859-15</b> before starting the
-  program.</p>
- <li>Binary file transfer on Windows can result in corrupted files, with
-  hex <b>0x0d</b> characters inserted or deleted.</li>
  <li>The <b>x3270</b> pop-up keypad does not work properly with the Compiz
   Cube.</li>
  <li>The Keep-alive feature does not work on Windows.</li>
