@@ -149,9 +149,6 @@ idle_init(void)
 #else /*][*/
 	srandom(time(NULL));
 #endif /*]*/
-
-	printf("idle_init: user_enabled %d, enabled %d, idle_ms %ld idle_randomize %d\n",
-		idle_user_enabled, idle_enabled, idle_ms, idle_randomize);
 }
 
 /*
