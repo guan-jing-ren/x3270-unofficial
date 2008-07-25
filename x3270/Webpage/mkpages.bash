@@ -110,6 +110,7 @@ cat <<EOF
 <a href="@HOME@license.html">License</a><br>
       <a href="@HOME@download.html">Download</a><br>
       <a href="@HOME@credits.html">Credits</a><br>
+      <a href="http://sourceforge.net/project/project_donations.php?group_id=153338">Donations</a><br>
       <p>
         <a href="http://sourceforge.net/projects/x3270"><img src="http://sourceforge.net/sflogo.php?group_id=153338&amp;type=1" width="88" height="31" style="border-width: 0" alt="SourceForge.net Logo" /></a>
       </p>
