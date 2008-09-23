@@ -29,18 +29,18 @@ Source: "\\Melville\pdm\psrc\x3270\Release\Inno\ws3270\ws3270.exe"; DestDir: "{a
 Source: "\\Melville\pdm\psrc\x3270\Release\Inno\ws3270\w3n4.dll"; DestDir: "{app}"; Flags: ignoreversion; OnlyBelowVersion: 0.0,5.01
 Source: "\\Melville\pdm\psrc\x3270\Release\Inno\ws3270\w3n46.dll"; DestDir: "{app}"; Flags: ignoreversion; MinVersion: 0.0,5.01
 Source: "\\Melville\pdm\psrc\x3270\Release\Inno\ws3270\shf.dll"; DestDir: "{app}"; Flags: ignoreversion; MinVersion: 0.0,5.0
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\Bugs.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\Build.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\FAQ.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\Intro.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\Lineage.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\New.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\README.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\ws3270-man.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\html\Wishlist.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\LICENSE.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\README.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3svn\ws3270\x3270_glue.expect"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\Bugs.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\Build.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\FAQ.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\Intro.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\Lineage.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\New.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\README.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\ws3270-man.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\html\Wishlist.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\LICENSE.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\README.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\ws3270\x3270_glue.expect"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Dirs]
