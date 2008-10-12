@@ -43,7 +43,7 @@ Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\FAQ.html"; De
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\Intro.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\Keymap.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\Lineage.html"; DestDir: "{app}\html"; Flags: ignoreversion
-Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\New.html"; DestDir: "{app}\html"; Flags: ignoreversion
+Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\ReleaseNotes.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\README.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\wc3270-man.html"; DestDir: "{app}\html"; Flags: ignoreversion
 Source: "\\Melville\pdm\psrc\x3270\Source\3.3.8-branch\wc3270\html\Wishlist.html"; DestDir: "{app}\html"; Flags: ignoreversion
