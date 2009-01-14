@@ -1,5 +1,5 @@
 /*
- * Copyright 2008 by Paul Mattes.
+ * Copyright 2008-2009 by Paul Mattes.
  *   Permission to use, copy, modify, and distribute this software and its
  *   documentation for any purpose and without fee is hereby granted,
  *   provided that the above copyright notice appear in all copies and that
@@ -32,8 +32,8 @@
 #endif /*]*/
 
 #if defined(USE_ICONV) /*[*/
-iconv_t i_u2mb = (iconv_t *)-1;
-iconv_t i_mb2u = (iconv_t *)-1;
+iconv_t i_u2mb = (iconv_t)-1;
+iconv_t i_mb2u = (iconv_t)-1;
 #endif /*]*/
 
 /*
