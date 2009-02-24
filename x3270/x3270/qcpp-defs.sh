@@ -1,1 +1,0 @@
-../Common/qcpp-defs.sh
