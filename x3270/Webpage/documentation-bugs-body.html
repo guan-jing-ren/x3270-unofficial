@@ -9,6 +9,29 @@
 </ul>
 <h2>Outstanding Bugs</h2>
 <ul>
+    <li>The <b>wc3270</b> manual page uses the wrong names for the resources
+     used to set the font and font size for the <b>PrintText</b> action.
+     The proper names are <b>wc3270.printTextFont</b> and
+     <b>wc3270.printTextSize</b> respectively.</li>
+    <li><b>wc3270</b> default keyboard mappings that use the <b>Alt</b>
+     key and a printable character, such as <b>Alt-p</b> for <b>PrintText</b>
+     and <b>Alt-c</b> for <b>Clear</b>, do not always work.
+     In particular, they will not be recognized if the Shift key is pressed
+     or CapsLock is enabled.</li>
+    <li><b>s3270</b>, <b>tcl3270</b> and <b>c3270</b> will not
+     build with DBCS support turned off.  The compile will fail at line 788
+     of glue.c.  The workaround is to delete that line of code.  Note that
+     DBCS support is automatcially turned off in <b>c3270</b>'s <b>configure</b>
+     script if it cannot find a wide-curses library.</li>
+    <li><b>x3270</b> will not run correctly on a clean installation of Ubuntu
+     8.10.  It will complain about not being able to find any colors and
+     run in a white-on-black mode.  This is not an <b>x3270</b> bug, it is
+     an <a href="http://bugs.launchpad.net/ubuntu/+source/xcolors/+bug/304567">
+     Ubuntu bug</a>.  A workaround is to install your own copy of
+     <b>/etc/X11/rgb.txt</b>.  A copy is
+     <a href="http://x3270.bgp.nu/download/rgb.txt">here</a>.
+    <li>The <b>ibm_hosts</b> file is ignored by <b>x3270</b> and
+     <b>c3270</b>.</li>
  <li>When <b>wc3270</b> copies DBCS text to the Windows clipboard, it adds
   an extra space character between each pair of DBCS characters.</li>
  <li>'Flipped' mode (for right-to-left languages) is disabled.</li>
