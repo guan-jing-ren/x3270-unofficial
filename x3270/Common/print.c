@@ -54,6 +54,7 @@
 #include "popupsc.h"
 #include "printc.h"
 #include "unicodec.h"
+#include "trace_dsc.h"
 #include "utf8c.h"
 #include "utilc.h"
 
@@ -840,10 +841,6 @@ find_wordpad(void)
 	} else {
 	    wp = NewString(data);
 	}
-	if (GetShortPathName(wp, data, sizeof(data)) != 0) {
-	    Free(wp);
-	    wp = NewString(data);
-	}
 	return wp;
 }
 #endif /*]*/
@@ -1062,13 +1059,14 @@ PrintText_action(Widget w _is_unused, XEvent *event, String *params,
 				char *cmd;
 
 				if (filter != CN)
-				    cmd = xs_buffer("start /wait /min %s "
+				    cmd = xs_buffer("start /wait /min \" \" \"%s\" "
 					    	    "/pt \"%s\" \"%s\"",
 						    wp, temp_name, filter);
 				else
-				    cmd = xs_buffer("start /wait /min %s "
+				    cmd = xs_buffer("start /wait /min \" \" \"%s\" "
 					    	    "/p \"%s\"",
 						    wp, temp_name);
+				trace_event("PrintText() command: %s\n", cmd);
 				system(cmd);
 				Free(cmd);
 
